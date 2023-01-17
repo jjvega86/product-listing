@@ -1,7 +1,13 @@
 header {
   display: flex;
   flex-direction: flex-start;
-  background-color: red;
+  background-color: #f7dade;
   padding: 0.5rem;
   margin-bottom: 2rem;
+}
+
+header p {
+  font-size: 1.55rem;
+  font-weight: bold;
+  margin-left: 2rem;
 }

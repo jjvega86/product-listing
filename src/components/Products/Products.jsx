@@ -4,13 +4,11 @@ import Product from "../Product/Product";
 
 const Products = ({ products }) => {
   return (
-    <main>
-      <section className="products">
-        {products.map((product) => (
-          <Product product={product} />
-        ))}
-      </section>
-    </main>
+    <section className="products">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </section>
   );
 };
 
