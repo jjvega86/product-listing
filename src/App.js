@@ -1,10 +1,16 @@
-import "./App.css";
+import { useState } from "react";
+import data from "./data/data.json";
+
+import NavBar from "./components/NavBar/NavBar";
+import Products from "./components/Products/Products";
 
 function App() {
+  const [allProducts, setAllProducts] = useState(data.products);
   return (
-    <main>
-      <h1>Hello World!</h1>
-    </main>
+    <>
+      <NavBar />
+      {allProducts && <Products products={allProducts} />}
+    </>
   );
 }
 
