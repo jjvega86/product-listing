@@ -2,3 +2,12 @@ main {
   display: grid;
   place-content: center;
 }
+
+.controls {
+  display: flex;
+  gap: 2rem;
+}
+
+.controls button {
+  max-height: 50%;
+}

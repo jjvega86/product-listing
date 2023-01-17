@@ -1,0 +1,10 @@
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-rating img {
+  max-width: 30px;
+  max-height: 30px;
+}

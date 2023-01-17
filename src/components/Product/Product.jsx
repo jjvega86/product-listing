@@ -1,6 +1,8 @@
 import React from "react";
 import "./Product.css";
 
+import StarRating from "../StarRating/StarRating";
+
 const Product = ({ product }) => {
   return (
     <div className="product">
@@ -9,7 +11,7 @@ const Product = ({ product }) => {
         <h2>{product.title}</h2>
         <p>{product.brand}</p>
         <p>{product.category}</p>
-        <p>{product.rating} / 5</p>
+        <StarRating rating={product.rating} />
       </div>
     </div>
   );
