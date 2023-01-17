@@ -11,10 +11,14 @@ function App() {
   const [allProducts, setAllProducts] = useState(data.products);
 
   const filterProducts = (category) => {
-    console.log(category);
-    let filteredProducts = data.products.filter(
-      (product) => product.category === category
-    );
+    let filteredProducts = [];
+    if (category === "All Products") {
+      filteredProducts = [...data.products];
+    } else {
+      filteredProducts = data.products.filter(
+        (product) => product.category === category
+      );
+    }
     console.log(filteredProducts);
     setAllProducts([...filteredProducts]);
   };

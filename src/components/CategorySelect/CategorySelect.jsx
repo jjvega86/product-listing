@@ -1,8 +1,12 @@
 import { useState } from "react";
+import "./CategorySelect.css";
 
 function CategorySelect({ products, filterProducts }) {
   const [selectedOption, setSelectedOption] = useState("");
-  const options = [...new Set(products.map((product) => product.category))];
+  const options = [
+    "All Products",
+    ...new Set(products.map((product) => product.category)),
+  ];
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
@@ -10,7 +14,7 @@ function CategorySelect({ products, filterProducts }) {
   };
 
   return (
-    <div>
+    <div className="category-select">
       <select onChange={(e) => handleChange(e)}>
         {options.map((option) => (
           <option key={option} value={option}>
@@ -18,7 +22,6 @@ function CategorySelect({ products, filterProducts }) {
           </option>
         ))}
       </select>
-      <p>{selectedOption.toUpperCase()}</p>
     </div>
   );
 }
