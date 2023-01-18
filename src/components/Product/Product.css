@@ -1,6 +1,11 @@
 .product {
   max-width: 200px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.8s;
+}
+
+.product:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
 .product h2 {
